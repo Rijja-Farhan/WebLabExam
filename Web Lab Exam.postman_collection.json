@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "3d142197-fddf-4093-b5a7-90369402d181",
+		"name": "Web Lab Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39505451"
+	},
+	"item": [
+		{
+			"name": "Add author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"phoneNumber\": \"1234567890\"\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Author/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Author",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete author",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Author/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Author",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "676d56c4f9cbf81aa47a9099"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Author",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Abc\",\r\n  \"email\": \"abc@example.com\",\r\n  \"phoneNumber\": \"1234567890\"\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Author/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Author",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "676d5762f9cbf81aa47a909e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sample Book\",\r\n  \"author\": \"676d5752f9cbf81aa47a909c\",\r\n  \"isbn\": \"9781234567890\",\r\n  \"availableCopies\": 50,\r\n  \"borrowCount\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Book/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Book",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "676d58f46bf74061b5b04094"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sample Book\",\r\n  \"author\": \"676d5752f9cbf81aa47a909c\",\r\n  \"isbn\": \"9781234567890\",\r\n  \"availableCopies\": 50,\r\n  \"borrowCount\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Book/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Sample Book\",\r\n  \"author\": \"64fc3b234bc12b09a7c5e678\",\r\n  \"isbn\": \"9781234567890\",\r\n  \"availableCopies\": 50,\r\n  \"borrowCount\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Book/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Book",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "676d59696bf74061b5b04097"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create borrower",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"borrowedBooks\": [\r\n      \"676d5ece8a4cd960f4037b41\", \r\n      \"676d5f0a8a4cd960f4037b45\"\r\n    ],\r\n    \"membershipActive\": true,\r\n    \"membershipType\": \"standard\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Borrower/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Borrower",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update borrower",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dua Farhan\",\r\n    \r\n    \"membershipType\": \"standard\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Borrower/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Borrower",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "676d600999818f48c31bb793"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authors exceeding book limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Author/Limit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Author",
+						"Limit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "return Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"borrowerId\": \"676d600999818f48c31bb793\", \r\n  \"bookId\": \"676d5ece8a4cd960f4037b41\"     \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/Borrower/return",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Borrower",
+						"return"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
